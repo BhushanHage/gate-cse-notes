@@ -1,4 +1,4 @@
-# Compiler design notes
+# Compiler Design Notes
 
 This folder is dedicated to **Compiler Design** study materials for **GATE CSE 2027** preparation.
 

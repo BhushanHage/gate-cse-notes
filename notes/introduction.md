@@ -100,7 +100,7 @@ If you prepare it well, you can score many direct and conceptual marks.
 ## 6. Diagrams / Flowcharts
 
 ### 6.1 OSI Model Diagram
-```text
+
 Application
 Presentation
 Session
@@ -108,3 +108,87 @@ Transport
 Network
 Data Link
 Physical
+
+### 6.2 Simple Flowchart of Data Transmission
+Text
+Data from Application Layer
+        ↓
+Passed to Transport Layer
+        ↓
+Sent through Network Layer
+        ↓
+Transmission via Data Link Layer
+        ↓
+Reaches Physical Layer
+        ↓
+Sent over the communication medium
+### 6.3 Simple Network View
+Text
+Device 1 ←→ Switch ←→ Device 2
+              |
+           Router
+              |
+           Internet
+## 7. Important GATE Concepts from This Chapter
+You should be able to explain:
+
+what a computer network is
+why networks are needed
+how devices communicate
+what nodes and links are
+difference between bandwidth and throughput
+difference between latency and jitter
+why protocols are necessary
+why the OSI and TCP/IP models matter
+
+## 8. Common Confusions to Avoid
+Bandwidth vs Throughput
+Bandwidth = maximum possible capacity
+Throughput = actual achieved rate
+Latency vs Delay
+Latency is the general time taken for data to move
+Delay may include transmission, propagation, processing, and queuing components
+Protocol vs Standard
+Protocol = communication rules
+Standard = agreed specification for compatibility
+
+## 9. Trusted References / Official Websites
+Cisco Networking Academy
+Coursera - Computer Networks
+IEEE Xplore
+NPTEL Computer Networks
+IETF RFC Repository
+These are reliable sources for understanding networking concepts.
+
+## 10. Summary
+A computer network connects devices so they can share information and resources. Networks are important because they improve communication, reduce cost, and make systems scalable and manageable. For GATE CSE, the most important parts of this chapter are basic terminology, network importance, OSI/TCP-IP awareness, and common PYQ-style concepts.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,392 @@
+---
+title: "Networking Formula Sheet"
+output: html_document
+---
+
+# Networking Formula Sheet
+
+## 1. Transmission Delay
+
+### Formula
+
+Transmission Delay = Packet Size / Bandwidth
+
+### Meaning
+
+The time required to put all bits of a packet onto the transmission medium.
+
+### Notes
+
+- Larger packet size increases transmission delay
+- Higher bandwidth decreases transmission delay
+
+### Units
+
+- Packet size: bits
+- Bandwidth: bits/second
+- Delay: seconds
+
+---
+
+## 2. Propagation Delay
+
+### Formula
+
+Propagation Delay = Distance / Propagation Speed
+
+### Meaning
+
+The time taken for a signal to travel from sender to receiver.
+
+### Notes
+
+- Depends on physical distance
+- Depends on speed of signal in the medium
+
+### Units
+
+- Distance: meters
+- Propagation speed: meters/second
+- Delay: seconds
+
+---
+
+## 3. Bit Rate
+
+### Formula
+
+Bit Rate = Baud Rate × Bits per Symbol
+
+### Meaning
+
+Bit rate is the number of bits transmitted per second.
+
+### Notes
+
+- Baud rate = symbols per second
+- Bits per symbol = number of bits represented by each symbol
+
+### Units
+
+- Bit rate: bits/second
+
+---
+
+## 4. Throughput
+
+### Formula
+
+Throughput = Successful Data Delivered / Time
+
+### Meaning
+
+The actual amount of useful data delivered per unit time.
+
+### Notes
+
+- Throughput is usually less than raw bandwidth
+- It depends on congestion, protocol overhead, and errors
+
+### Units
+
+- bits/second or bytes/second
+
+---
+
+## 5. Efficiency
+
+### Formula
+
+Efficiency = Useful Output / Total Input
+
+### Meaning
+
+Measures how much of the transmitted data is actually useful.
+
+### Notes
+
+- Higher overhead reduces efficiency
+- Used in networking performance analysis
+
+### Units
+
+- Percentage or ratio
+
+---
+
+## 6. Shannon Capacity Formula
+
+### Formula
+
+Channel Capacity = Bandwidth × log2(1 + SNR)
+
+### Meaning
+
+Gives the maximum theoretical data rate of a noisy channel.
+
+### Where
+
+- Bandwidth = channel bandwidth
+- SNR = signal-to-noise ratio
+
+### Notes
+
+- More bandwidth increases capacity
+- Higher SNR increases capacity
+
+### Units
+
+- bits/second
+
+---
+
+## 7. Nyquist Bit Rate Formula
+
+### Formula
+
+Maximum Data Rate = 2 × Bandwidth × log2(L)
+
+### Meaning
+
+Gives the maximum data rate of a noiseless channel.
+
+### Where
+
+- Bandwidth = channel bandwidth
+- L = number of signal levels
+
+### Notes
+
+- Used for ideal noiseless channel
+- More signal levels increase data rate
+
+### Units
+
+- bits/second
+
+---
+
+## 8. IPv4 Address Space
+
+### Formula
+
+Total IPv4 Addresses = 2^32
+
+### Meaning
+
+IPv4 uses 32-bit addresses, so total possible addresses are 2 raised to 32.
+
+### Notes
+
+- Actual usable addresses are fewer because of reserved ranges
+
+---
+
+## 9. IPv6 Address Space
+
+### Formula
+
+Total IPv6 Addresses = 2^128
+
+### Meaning
+
+IPv6 uses 128-bit addresses and supports a very large number of unique addresses.
+
+---
+
+## 10. CIDR Host Address Formula
+
+### Formula
+
+Number of host addresses = 2^(32 - prefix_length)
+
+### Meaning
+
+Used to calculate total addresses in an IPv4 subnet.
+
+### Example
+
+For /24:
+
+2^(32 - 24) = 2^8 = 256
+
+### Notes
+
+- Usable host addresses are usually:
+
+2^(32 - prefix_length) - 2
+
+because network and broadcast addresses are reserved
+
+---
+
+## 11. Subnet Mask Relation
+
+### Formula
+
+Network bits + Host bits = 32
+
+### Meaning
+
+In IPv4, the 32 bits of the address are divided into network and host portions.
+
+### Notes
+
+- CIDR notation shows the network bits
+- Example: /24 means 24 network bits and 8 host bits
+
+---
+
+## 12. Total Delay in Networks
+
+### Formula
+
+Total Delay = Transmission Delay + Propagation Delay + Queueing Delay + Processing Delay
+
+### Meaning
+
+The total time taken by a packet to travel from source to destination.
+
+### Components
+
+- Transmission delay: time to push bits onto link
+- Propagation delay: time for signal to travel
+- Queueing delay: waiting time in router or switch queue
+- Processing delay: time to process packet header
+
+---
+
+## 13. Hamming Distance
+
+### Formula
+
+Hamming Distance = Number of differing bit positions
+
+### Meaning
+
+Measures how many bits differ between two binary strings of equal length.
+
+### Notes
+
+- Used in error detection and coding theory
+- Smaller Hamming distance means more similarity
+
+---
+
+## 14. TCP Window Concept
+
+### Formula
+
+Window Size = Number of bytes that can be sent before acknowledgment
+
+### Meaning
+
+Used in TCP flow control to control how much data can be sent before ACK is received.
+
+### Notes
+
+- Larger window improves throughput
+- Window size depends on receiver buffer and congestion
+
+---
+
+## 15. Goodput
+
+### Formula
+
+Goodput = Application Data Delivered / Time
+
+### Meaning
+
+Only the useful application data delivered, excluding protocol overhead and retransmissions.
+
+### Notes
+
+- Goodput is usually less than throughput
+
+---
+
+## 16. Utilization
+
+### Formula
+
+Utilization = Busy Time / Total Time
+
+### Meaning
+
+Shows how effectively a link or system is being used.
+
+---
+
+## 17. Packet Efficiency
+
+### Formula
+
+Packet Efficiency = Payload Size / Total Packet Size
+
+### Meaning
+
+Indicates how much of the packet is actual useful payload.
+
+### Notes
+
+- Higher header overhead means lower efficiency
+
+---
+
+## 18. Bandwidth-Delay Product
+
+### Formula
+
+Bandwidth-Delay Product = Bandwidth × Propagation Delay
+
+### Meaning
+
+Represents the amount of data that can be in transit in the network.
+
+### Notes
+
+- Very important in TCP window sizing
+- Helps understand pipeline capacity
+
+---
+
+## 19. Error Rate
+
+### Formula
+
+Error Rate = Number of Errors / Total Number of Bits or Packets
+
+### Meaning
+
+Measures how often transmission errors occur.
+
+---
+
+## 20. Final Quick Revision Table
+
+| Topic | Formula |
+|---|---|
+| Transmission Delay | Packet Size / Bandwidth |
+| Propagation Delay | Distance / Propagation Speed |
+| Bit Rate | Baud Rate × Bits per Symbol |
+| Throughput | Successful Data Delivered / Time |
+| Efficiency | Useful Output / Total Input |
+| Shannon Capacity | Bandwidth × log2(1 + SNR) |
+| Nyquist Bit Rate | 2 × Bandwidth × log2(L) |
+| IPv4 Addresses | 2^32 |
+| IPv6 Addresses | 2^128 |
+| CIDR Host Count | 2^(32 - prefix_length) |
+| Total Delay | TD + PD + QD + ProcD |
+| Hamming Distance | Differing bit positions |
+| Bandwidth-Delay Product | Bandwidth × Propagation Delay |
+
+---
+
+## 21. Exam Tips
+
+- Memorize the formula names and their meanings.
+- Know which formula applies to noiseless vs noisy channels.
+- For subnetting, remember `2^(host bits)`.
+- For delay questions, separate transmission and propagation delay.
+- For TCP, focus on window size and bandwidth-delay product.

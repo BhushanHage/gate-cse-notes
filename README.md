@@ -7,6 +7,7 @@ A curated set of concise, exam-focused notes for **Computer Networks** to suppor
 - [About This Repository](#about-this-repository)
 - [Repository Structure](#repository-structure)
 - [Study Topics](#study-topics)
+- [Suggested GitHub Topics](#suggested-github-topics)
 - [How to Use These Notes](#how-to-use-these-notes)
 - [Study Guide Overview](#study-guide-overview)
 - [Contributing](#contributing)
@@ -50,6 +51,16 @@ gate-cse-notes/
 - [Important Differences Cheat Sheet](notes/08_important_differences.md)
 - [Networking Formula Sheet](notes/Formula.rmd)
 - [Networking Study Aid](notes/networking_study_aid.md)
+
+## Suggested GitHub Topics
+
+For better discoverability, consider adding these repository topics on GitHub:
+
+- `gate-cse`
+- `gate-2027`
+- `computer-networks`
+- `study-notes`
+- `exam-preparation`
 
 ## How to Use These Notes
 
